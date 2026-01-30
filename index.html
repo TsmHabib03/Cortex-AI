@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cortex AI — Intelligent AI Agents</title>
+
+  <style>
+    /* ===== RESET ===== */
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Segoe UI',system-ui,sans-serif;
+    }
+
+    body{
+      background:linear-gradient(135deg,#0a0f1f,#0f172a);
+      color:#e5e7eb;
+      min-height:100vh;
+    }
+
+    a{color:inherit;text-decoration:none}
+
+    /* ===== HEADER ===== */
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 60px;
+    }
+
+    .logo{
+      font-size:1.5rem;
+      font-weight:700;
+      letter-spacing:1px;
+    }
+
+    nav a{
+      margin-left:30px;
+      opacity:.85;
+    }
+
+    nav a:hover{opacity:1}
+
+    /* ===== HERO ===== */
+    .hero{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+      padding:100px 20px 80px;
+    }
+
+    .hero h1{
+      font-size:3.2rem;
+      max-width:900px;
+      line-height:1.1;
+    }
+
+    .hero p{
+      margin-top:20px;
+      font-size:1.2rem;
+      max-width:650px;
+      opacity:.85;
+    }
+
+    .hero-buttons{
+      margin-top:40px;
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+
+    .btn{
+      padding:14px 32px;
+      border-radius:30px;
+      font-weight:600;
+      cursor:pointer;
+      transition:.3s ease;
+    }
+
+    .btn.primary{
+      background:#6366f1;
+      color:white;
+      box-shadow:0 0 25px rgba(99,102,241,.4);
+    }
+
+    .btn.primary:hover{transform:translateY(-2px)}
+
+    .btn.secondary{
+      border:1px solid rgba(255,255,255,.2);
+      opacity:.9;
+    }
+
+    .btn.secondary:hover{opacity:1}
+
+    /* ===== SECTIONS ===== */
+    section{
+      padding:80px 60px;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    section h2{
+      font-size:2.2rem;
+      margin-bottom:20px;
+      text-align:center;
+    }
+
+    section p.section-desc{
+      text-align:center;
+      max-width:700px;
+      margin:0 auto 60px;
+      opacity:.8;
+    }
+
+    /* ===== AGENTS ===== */
+    .agents{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .agent-card{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:20px;
+      padding:30px;
+      transition:.3s ease;
+    }
+
+    .agent-card:hover{transform:translateY(-6px)}
+
+    .agent-card h3{
+      margin-bottom:10px;
+      font-size:1.3rem;
+    }
+
+    .agent-card p{opacity:.8}
+
+    /* ===== HOW IT WORKS ===== */
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:30px;
+      text-align:center;
+    }
+
+    .step{
+      padding:20px;
+    }
+
+    .step span{
+      font-size:2.5rem;
+      display:block;
+      margin-bottom:10px;
+    }
+
+    /* ===== CTA ===== */
+    .cta{
+      background:linear-gradient(135deg,#6366f1,#4f46e5);
+      border-radius:30px;
+      padding:80px 40px;
+      text-align:center;
+      margin:80px auto;
+    }
+
+    .cta h2{font-size:2.5rem}
+    .cta p{margin:20px auto 40px;max-width:600px}
+
+    /* ===== FOOTER ===== */
+    footer{
+      padding:40px;
+      text-align:center;
+      opacity:.6;
+      font-size:.9rem;
+    }
+
+    @media(max-width:700px){
+      .hero h1{font-size:2.4rem}
+      header{padding:20px}
+      section{padding:60px 20px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Cortex AI</div>
+    <nav>
+      <a href="#agents">Agents</a>
+      <a href="#how">How it works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Intelligent AI Agents<br>Built to Help With Anything</h1>
+    <p>Cortex AI creates smart, helpful AI agents that assist with learning, planning, creating, and everyday tasks — all in one platform.</p>
+    <div class="hero-buttons">
+      <div class="btn primary">Try Demo</div>
+      <div class="btn secondary">Meet the Agents</div>
+    </div>
+  </div>
+
+  <!-- AGENTS -->
+  <section id="agents">
+    <h2>Our AI Agents</h2>
+    <p class="section-desc">Each Cortex AI agent is designed to solve real problems and make your life easier.</p>
+
+    <div class="agents">
+      <div class="agent-card">
+        <h3>🧠 Cortex Assistant</h3>
+        <p>Your everyday AI helper. Ask questions, generate ideas, write content, and get instant explanations.</p>
+      </div>
+
+      <div class="agent-card">
+        <h3>📚 Cortex Study Agent</h3>
+        <p>Built for students. Explains lessons, summarizes topics, and creates quizzes to help you learn faster.</p>
+      </div>
+
+      <div class="agent-card">
+        <h3>✅ Cortex Task Agent</h3>
+        <p>Plans tasks, builds to-do lists, and helps you organize your goals step by step.</p>
+      </div>
+
+      <div class="agent-card">
+        <h3>🌐 Cortex Web Agent</h3>
+        <p>Finds information online, gathers data, and summarizes results so you don’t have to search manually.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how">
+    <h2>How Cortex AI Works</h2>
+    <p class="section-desc">Simple, fast, and designed for everyone.</p>
+
+    <div class="steps">
+      <div class="step">
+        <span>1️⃣</span>
+        <h3>Choose an Agent</h3>
+        <p>Select the AI agent that fits your needs.</p>
+      </div>
+
+      <div class="step">
+        <span>2️⃣</span>
+        <h3>Give Instructions</h3>
+        <p>Tell Cortex AI what you want to do.</p>
+      </div>
+
+      <div class="step">
+        <span>3️⃣</span>
+        <h3>Get Results</h3>
+        <p>The agent thinks, plans, and helps instantly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta" id="contact">
+    <h2>Ready to Use Cortex AI?</h2>
+    <p>Experience intelligent AI agents that work with you, not just for you.</p>
+    <div class="btn secondary">Get Started</div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Cortex AI · Intelligent AI Agents · Privacy & Terms
+  </footer>
+
+</body>
+</html>
